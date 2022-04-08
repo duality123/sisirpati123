@@ -1,0 +1,31 @@
+{
+"type": "FeatureCollection",
+"name": "Akresi Abrasi",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Id": 0, "KETERANGAN": "Akresi" }, "geometry": { "type": "Point", "coordinates": [ 110.988097003369205, -6.412307606091078 ] } },
+{ "type": "Feature", "properties": { "Id": 0, "KETERANGAN": "Akresi" }, "geometry": { "type": "Point", "coordinates": [ 110.998524991227271, -6.413170160705681 ] } },
+{ "type": "Feature", "properties": { "Id": 0, "KETERANGAN": "Akresi" }, "geometry": { "type": "Point", "coordinates": [ 111.001053168545965, -6.412634781979381 ] } },
+{ "type": "Feature", "properties": { "Id": 0, "KETERANGAN": "Akresi" }, "geometry": { "type": "Point", "coordinates": [ 111.003343399764091, -6.413431901416334 ] } },
+{ "type": "Feature", "properties": { "Id": 0, "KETERANGAN": "Akresi" }, "geometry": { "type": "Point", "coordinates": [ 111.004878152112838, -6.414121945108024 ] } },
+{ "type": "Feature", "properties": { "Id": 0, "KETERANGAN": "Akresi" }, "geometry": { "type": "Point", "coordinates": [ 111.006787669570031, -6.414538350784042 ] } },
+{ "type": "Feature", "properties": { "Id": 0, "KETERANGAN": "Akresi" }, "geometry": { "type": "Point", "coordinates": [ 111.011165877820773, -6.415858951642281 ] } },
+{ "type": "Feature", "properties": { "Id": 0, "KETERANGAN": "Akresi" }, "geometry": { "type": "Point", "coordinates": [ 111.008875646602647, -6.415275983695849 ] } },
+{ "type": "Feature", "properties": { "Id": 0, "KETERANGAN": "Akresi" }, "geometry": { "type": "Point", "coordinates": [ 111.014717223371989, -6.417090322712808 ] } },
+{ "type": "Feature", "properties": { "Id": 0, "KETERANGAN": "Akresi" }, "geometry": { "type": "Point", "coordinates": [ 111.016186540543075, -6.417518625693861 ] } },
+{ "type": "Feature", "properties": { "Id": 0, "KETERANGAN": "Akresi" }, "geometry": { "type": "Point", "coordinates": [ 111.019934191627286, -6.417643547396665 ] } },
+{ "type": "Feature", "properties": { "Id": 0, "KETERANGAN": "Akresi" }, "geometry": { "type": "Point", "coordinates": [ 111.02246236894598, -6.418446615486135 ] } },
+{ "type": "Feature", "properties": { "Id": 0, "KETERANGAN": "Akresi" }, "geometry": { "type": "Point", "coordinates": [ 111.024490859453437, -6.419267529533148 ] } },
+{ "type": "Feature", "properties": { "Id": 0, "KETERANGAN": "Abrasi" }, "geometry": { "type": "Point", "coordinates": [ 111.036382215830102, -6.423217434802818 ] } },
+{ "type": "Feature", "properties": { "Id": 0, "KETERANGAN": "Abrasi" }, "geometry": { "type": "Point", "coordinates": [ 111.046494925104923, -6.426376169288073 ] } },
+{ "type": "Feature", "properties": { "Id": 0, "KETERANGAN": "Abrasi" }, "geometry": { "type": "Point", "coordinates": [ 111.07961821203665, -6.552830244982196 ] } },
+{ "type": "Feature", "properties": { "Id": 0, "KETERANGAN": "Abrasi" }, "geometry": { "type": "Point", "coordinates": [ 111.090482830989359, -6.576308386726764 ] } },
+{ "type": "Feature", "properties": { "Id": 0, "KETERANGAN": "Akresi" }, "geometry": { "type": "Point", "coordinates": [ 111.214106537817301, -6.680997770546808 ] } },
+{ "type": "Feature", "properties": { "Id": 0, "KETERANGAN": "Akresi" }, "geometry": { "type": "Point", "coordinates": [ 111.216949993719297, -6.682520625590558 ] } },
+{ "type": "Feature", "properties": { "Id": 0, "KETERANGAN": "Akresi" }, "geometry": { "type": "Point", "coordinates": [ 111.218704846211111, -6.683252309849851 ] } },
+{ "type": "Feature", "properties": { "Id": 0, "KETERANGAN": "Akresi" }, "geometry": { "type": "Point", "coordinates": [ 111.220917744946533, -6.684156505032073 ] } },
+{ "type": "Feature", "properties": { "Id": 0, "KETERANGAN": "Akresi" }, "geometry": { "type": "Point", "coordinates": [ 111.225504156035271, -6.685667462770767 ] } },
+{ "type": "Feature", "properties": { "Id": 0, "KETERANGAN": "Akresi" }, "geometry": { "type": "Point", "coordinates": [ 111.227360135619818, -6.686202841497089 ] } },
+{ "type": "Feature", "properties": { "Id": 0, "KETERANGAN": "Abrasi" }, "geometry": { "type": "Point", "coordinates": [ 111.043352932152587, -6.438115269355043 ] } }
+]
+}

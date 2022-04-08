@@ -1,0 +1,83 @@
+{% extends 'blog/basis.html' %}
+{% load static %}
+{% block content %}
+<!-- Konten -->
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<div class="card my-5 px-3">
+				<div class="card-body">
+				 <div class="card card-info">
+              <div class="card-header">
+                <h3 class="card-title">Formulir Pengaduan</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form name="myForm" action="<?=base_url('Siemang/InputPengaduan')?>" onsubmit="return validateForm()" method="post" class="form-horizontal">
+                <div class="card-body">
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Nama</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputNama" name="inputNama" placeholder="Nama">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputPassword3" class="col-sm-2 col-form-label">Alamat</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputAlamat" name="inputAlamat" placeholder="Alamat">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputPassword3" class="col-sm-2 col-form-label">Nomer HP</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputNoHp" name="inputNoHp" placeholder="Nomer Hp">
+                    </div>
+                  </div>
+                 <div class="form-group row">
+                    <label for="inputPassword3" class="col-sm-2 col-form-label">Pengaduan</label>
+                    <div class="col-sm-10">
+                        <textarea class="form-control" rows="3" name="Pengaduan" placeholder="Pengaduan ..."></textarea>
+                    </div>
+                  </div>
+                </div>
+                <!-- /.card-body -->
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-info">Kirim Pengaduan</button>
+                 
+                </div>
+                <!-- /.card-footer -->
+              </form>
+            </div>
+            <!-- /.card -->								
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+</div><!-- Footer -->
+<script>
+function validateForm() {
+  let nama = document.forms["myForm"]["inputNama"].value;
+  let alamat = document.forms["myForm"]["inputAlamat"].value;
+  let noHp = document.forms["myForm"]["inputNoHp"].value;
+  let pengaduan = document.forms["myForm"]["Pengaduan"].value;
+  if (nama == "") {
+    alert("Name harus di isi");
+    return false;
+  }
+  if (alamat == "") {
+    alert("Alamat harus di isi");
+    return false;
+  }
+  if (noHp == "") {
+    alert("Nomer HP harus di isi");
+    return false;
+  }
+  if (pengaduan == "") {
+    alert("Pengaduan harus di isi");
+    return false;
+  }
+}
+</script>
+{% endblock content %}

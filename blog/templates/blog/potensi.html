@@ -1,0 +1,59 @@
+{% extends 'blog/basis.html' %}
+{% load static %}
+{% block content %}
+<section class="news-area archive blog-single section-padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-10 offset-lg-1 col-md-10 offset-md-1 col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="blog-single-main">
+							<div class="main-image">
+								<img src="<?=base_url('assets/images/potensi/'.$potensi[0]->Image)?>" alt="<?=$potensi[0]->Judul?>">
+							</div>
+							<div class="blog-detail">
+								<!-- News meta -->
+								<ul class="news-meta">
+									<li><i class="fa fa-user"></i><?=$potensi[0]->Penulis?></li>
+									<li><i class="fa fa-pencil"></i><?=$potensi[0]->Kalender?></li>
+									<li><i class="fa fa-folder"></i><?=$potensi[0]->Folder?></li>
+								</ul>
+								<h2 class="blog-title"><?=$potensi[0]->Judul?></h2>
+								<div class="row blog-space px-3">
+									<p><?=$potensi[0]->Isi?></p>								</div>
+
+								<!-- Post Nav -->
+								<div class="row">
+									<div class="col">
+										<a href="<?=base_url('Siemang/potensi/1')?>" class="btn btn-light mr-auto px-3 mb-5 bd-highlight"><span class="fa fa-fw fa-sm fa-arrow-left"></span><small> Kembali</small></a>
+									</div>
+								</div>
+
+								<div class="row mb-5">
+									<div class="col">
+										<ul class="list-group list-group-flush">
+											<?php if ($potensi_bwh != null) {
+												foreach ($potensi_bwh as $pb) { ?>
+												<li class="list-group-item">
+													<div class="row">
+														<span class="fa fa-fw fa-sm fa-clipboard mr-2"></span>
+														<a href="<?=base_url('Siemang/DetailPotensi/'.$pb->id)?>"><?=$pb->Judul?></a>
+													</div>
+												</li>
+																	
+											<?php }
+										} ?>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--/ End Services --><!-- Footer -->
+{% endblock content %}

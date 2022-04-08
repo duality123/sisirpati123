@@ -1,0 +1,437 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tag -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name='copyright' content='pavilan'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+    <link rel="stylesheet" href="../../src/styledLayerControl.css" />
+    <script src="../../src1/styledLayerControl.js"></script>
+
+    <script src="http://maps.google.com/maps/api/js?v=3.2&sensor=false&key=AIzaSyDeqZIQXFKMXqYccaxFFHtsxlhafvRFeQ4"></script>
+    <script src="https://raruto.github.io/cdn/leaflet-google/0.0.3/leaflet-google.js"></script>
+    <script src="{% static 'assets/js/Bing.js'%}"></script>
+    <!-- Title Tag  -->
+    <title>SisirPati - Kabupaten Pati, Jawa Tengah</title>
+
+    <!-- Jquery JS -->
+    <script src="{% static 'vendor/plugins/jquery/jquery.min.js' %}"></script>
+
+    <!-- Embed Media -->
+    <script async charset="utf-8" src="//cdn.embedly.com/widgets/platform.js"></script>
+
+    <!-- Favicon 
+    <link rel="icon" href="#">-->
+
+    <!-- Web Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script async charset="utf-8" src="//cdn.embedly.com/widgets/platform.js"></script>
+    <link rel="stylesheet" href="{% static 'vendor/animate/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/cubeportfolio.min.css'%}">
+    <!-- <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css'%}">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'assets/slicknav/slicknav.min.css')?>">
+
+    <link rel="stylesheet" href="{% static 'vendor/dist/css/reset.css'%}">
+    <link rel="stylesheet" href="{% static 'vendor/dist/css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'vendor/dist/css/responsive.css'%}">
+
+    <link rel="stylesheet" href="{% static 'assets/owl_carousel/css/owl.carousel.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/owl_carousel/css/owl.carousel.min.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/owl_carousel/css/owl.theme.default.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/owl_carousel/css/owl.theme.default.min.css'%}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/leaflet-search1.css'%}" >
+    <script src="{% static 'assets/js/leaflet-search.js'%}"></script>
+    <link href="{% static 'assets/css/leaflet.fullscreen1.css'%}" rel='stylesheet' >
+    <script src="{% static 'assets/js/Leaflet.fullscreen.min.js'%}"></script>
+     <script src="{% static 'assets/js/Leaflet.PolylineMeasure.js'%}"></script>
+  <link rel="stylesheet" href="{% static 'assets/css/Leaflet.PolylineMeasure.css'%}">
+
+  
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    <style>
+        .btn-xl {
+            margin-bottom: 10px;
+            margin-left: 20px;
+            padding: 10px 20px;
+            font-size: 30px;
+            border-radius: 0px;
+            width: 150%;
+        }
+
+        .btn-group-vertical .dropdown-menu li.dropdown-item {
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body id="bg">
+
+    <!-- Boxed Layout -->
+    <div id="page" class="site boxed-layout">
+
+        <!-- Preloader -->
+        <div class="preeloader">
+            <div class="preloader-spinner"></div>
+        </div>
+        <!--/ End Preloader -->
+
+        <!-- Header -->
+        <header class="header">
+            <!-- Middle Header -->
+            <div class="middle-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="middle-inner">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-12">
+                                        <!-- Logo -->
+                                        <div class="logo">
+                                            <!-- Image Logo -->
+                                            <div class="img-logo">
+                                                <a href="{%url 'beranda'%}">
+                                                    <img src="{% static 'assets/images/sisir.png' %}" alt="#" style="margin-bottom: 15px; height: 50px; width: 231px; ">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="mobile-nav"></div>
+                                    </div>
+<div class="col-lg-9 col-md-9 col-12">
+    <div class="menu-area">
+        <!-- Main Menu -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="navbar-collapse">
+                <div class="nav-inner">
+                    <div class="menu-home-menu-container">
+                        <!-- Naviagiton -->
+                        <ul id="nav" class="nav main-menu menu navbar-nav">
+
+                            <li><a href="{%url 'beranda'%}">Beranda</a></li>
+
+
+                            <li><a href="{%url 'profil'%}">Profil</a></li>
+
+
+                             <li><a href="{%url 'potensi'%}">Potensi</a></li>
+
+
+                            <li><a href="{%url 'berita'%}">Berita</a></li>
+
+
+                            <li><a href="{%url 'pengaduan'%}">Pengaduan</a></li>
+
+
+                            <li><a href="{%url 'peta'%}">Peta</a></li>
+
+                        </ul>
+                        <!--/ End Naviagiton -->
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!--/ End Main Menu -->
+
+        <!-- Right Bar -->
+        <div class="right-bar" style="align-content: center;">
+
+            <ul class="right-nav">
+                <li class="top-search"><a href="#0"><i class="fa fa-search"></i></a></li>
+                <li class="bar"><a href="#" class="fa fa-sign-in" data-toggle="tooltip" title="sign-in"></a></li>
+            </ul>
+
+            <div class="search-top">
+                <form action="#" class="search-form" method="get">
+                    <input type="text" name="s" value="" placeholder="Search here" />
+                    <button type="submit" id="searchsubmit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+
+        </div>
+        <div class="right-bar-kebalik">
+        </div>
+
+        <!--/ End Right Bar -->
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--/ End Middle Header -->
+</header>
+<script src="{% static 'assets/js/jquery.bootstrap-growl.js'%}"></script>
+
+ <script>
+     function alertFunc(status, message) {
+
+         $.bootstrapGrowl(message, {
+             ele: 'body', // which element to append to
+             type: status, // (NULL, 'info', 'error', 'success')
+             offset: {
+                 from: 'top',
+                 amount: 20
+             }, // 'top', or 'bottom'
+             align: 'right', // ('left', 'right', or 'center')
+             width: 400, // (integer, or 'auto')
+             delay: 4000,
+             allow_dismiss: true,
+             stackup_spacing: 10 // spacing between consecutively stacked growls.
+         });
+
+     };
+ </script>
+<script type="text/javascript">
+    $(function() {
+
+        $('#detailModal').on('show.bs.modal', function(event) {
+            $(this).find('.modal-body img').attr('src', '');
+            $(this).find('.modal-body p.alamat').html('');
+            $(this).find('.modal-body p.telp').html('');
+            $(this).find('.modal-body a.website').show();
+            $(this).find('.modal-body a.fb').show();
+            $(this).find('.modal-body a.twitter').show();
+            $(this).find('.modal-body a.ig').show();
+            $(this).find('.modal-header .modal-title').html('');
+
+            var button = $(event.relatedTarget) // Button that triggered the modal
+            var alamat = button.data('alamat') // Extract info from data-* attributes
+            var telp = button.data('telp')
+            var logo = button.data('logo')
+            var judul = button.data('judul')
+            var web = button.data('web') // Extract info from data-* attributes
+            var fb = button.data('fb')
+            var twitter = button.data('twitter')
+            var ig = button.data('ig')
+
+            var modal = $(this);
+            modal.find('.modal-header .modal-title').html(judul);
+            modal.find('.modal-body p.alamat').html("<span class='fa fa-fw fa-home mr-2'></span>" + alamat);
+            modal.find('.modal-body p.telp').html("<span class='fa fa-fw fa-phone mr-2'></span>" + telp);
+            if (web == 'kosong') {
+                modal.find('.modal-body a.website').hide();
+            } else {
+                modal.find('.modal-body a.website')
+                    .attr({
+                        href: web,
+                        title: web
+                    });
+
+            }
+
+            if (fb == 'kosong') {
+                modal.find('.modal-body a.fb').hide();
+            } else {
+                modal.find('.modal-body a.fb').attr({
+                    href: fb,
+                    title: fb
+                });
+
+            }
+
+            if (twitter == 'kosong') {
+                modal.find('.modal-body a.twitter').hide();
+            } else {
+                modal.find('.modal-body a.twitter').attr({
+                    href: twitter,
+                    title: twitter
+                });
+
+            }
+
+            if (ig == 'kosong') {
+                modal.find('.modal-body a.ig').hide();
+            } else {
+                modal.find('.modal-body a.ig').attr({
+                    href: ig,
+                    title: ig
+                });
+
+            }
+
+            modal.find('.modal-body img').attr('src', function(i, val) {
+                return val + logo;
+            });
+        });
+
+    })
+</script>
+{%block content%}
+
+{%endblock content%}
+<footer class="footer">
+    <!-- Footer Top -->
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-6 col-12">
+                    <!-- Footer About -->
+                    <div class="single-widget footer-about widget">
+                        <div class="logo">
+                            <div class="img-logo">
+                                <a class="logo" href="index.html">
+                                    <img class="img-responsive" src="{% static '/assets/images/sisir_footer.png' %}" alt="logo">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="footer-widget-about-description">
+                            <p>Tetap terhubung dengan kami</p>
+                        </div>
+                        <div class="social">
+                            <!-- Social Icons -->
+                            <ul class="social-icons">
+                                <li><a class="facebook" href="" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <li><a class="twitter" href="" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                <li><a class="instagram" href="" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--/ End Footer About -->
+                </div>
+                <div class="col-lg-2 col-md-6 col-12">
+                    <!-- Footer Links -->
+                    <div class="single-widget f-link widget">
+                        <h3 class="widget-title">Menu</h3>
+                        <ul>
+                            <li><a href="<?=base_url('Siemang')?>">Beranda</a></li>
+                            <li><a href="<?=base_url('Siemang/Profil')?>">Profil</a></li>
+                            <li><a href="<?=base_url('Siemang/Potensi')?>">Potensi</a></li>
+                            <li><a href="<?=base_url('Siemang/Berita/1')?>">Berita</a></li>
+                            <li><a href="<?=base_url('Siemang/Pengaduan')?>">Pengaduan</a></li>
+                            <li><a href="<?=base_url('Siemang/Peta')?>">Peta</a></li>
+                        </ul>
+                    </div>
+                    <!--/ End Footer Links -->
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+
+                    <!-- Footer News -->
+
+                    <div class="single-widget footer-news widget">
+                        <h3 class="widget-title">Kabar Pesisir Terbaru</h3>
+                        <!-- Single News -->
+                        <?php 
+                        $berita = $this->Crud_Model->getDataPagination('mst_berita',2, 1)->result();
+                        if ($berita != null) {
+                        foreach ($berita as $c) {
+                    ?>
+                        <div class="single-f-news">
+                            <div class="post-thumb"><a href="#"><img src="<?=base_url('assets/images/berita/'.$c->Image)?>" alt="#"></a></div>
+                            <div class="content">
+                                <p class="post-meta"><time class="post-date"><i class="fa fa-clock-o"></i><?php echo date('d F Y', strtotime($c->Kalender))?></time></p>
+                                <h4 class="title"><a href="<?=base_url('Siemang/DetailBerita'.$c->id)?>"><?=$c->Judul?></a></h4>
+                            </div>
+                        </div>
+                        <!--/ End Single News -->
+
+                        <?php }
+                    } ?>
+
+                    </div>
+                    <!--/ End Footer News -->
+
+                </div>
+
+                <div class="col-lg col-md-6 col-12">
+                    <!-- Footer Contact -->
+                    <div class="single-widget footer_contact widget">
+                        <h3 class="widget-title">Kontak</h3>
+                        <ul class="address-widget-list">
+                            <li class="footer-mobile-number"><i class="fa fa-phone"></i>(000)12345678</li>
+                            <li class="footer-mobile-number"><i class="fa fa-envelope"></i>sisirpati@sisirpati.patikab.go.id</li>
+                            <li class="footer-mobile-number"><i class="fa fa-map-marker"></i>Jl. P. Sudirman No.12 Kabupaten Pati</li>
+                        </ul>
+                    </div>
+                    <!--/ End Footer Contact -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="copyright-content">
+                        <!-- Copyright Text 
+                        <p>© Copyright 2021 </p>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ End Copyright -->
+</footer>
+
+<script src="{% static 'assets/js/migrate.js'%}"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<!-- Popper JS -->
+<script src="{% static 'vendor/plugins/popper/popper.min.js'%}"></script>
+
+<!-- Bootstrap JS -->
+<script src="{% static 'assets/js/bootstrap.min.js'%}"></script>
+<script src="https://singosaren.desaspasial.com/assets/js/modernizr.min.js"></script>
+<!-- ScrollUp JS -->
+<script src="{% static 'assets/js/scrollup.js'%}"></script>
+<script src="{% static 'assets/js/cubeportfolio.min.js'%}"></script>
+<!-- Slick Nav JS -->
+<script src="{% static 'assets/slicknav/slicknav.min.js'%}"></script>
+
+<!-- Slick Slider JS -->
+<script src="{% static 'assets/owl_carousel/js/owl-carousel.min.js'%}"></script>
+
+<!-- Active JS-->
+<script src="{% static 'vendor/dist/js/active.js'%}"></script>
+
+
+<script>
+    document.querySelectorAll('oembed[url]').forEach(element => {
+        // Create the <a href="..." class="embedly-card"></a> element that Embedly uses
+        // to discover the media.
+        const anchor = document.createElement('a');
+
+        anchor.setAttribute('href', element.getAttribute('url'));
+        anchor.className = 'embedly-card';
+
+        element.appendChild(anchor);
+    });
+
+    $(document).ready(function() {
+
+        $("#owl-slideshow").owlCarousel({
+          
+            navigation: true, // Show next and prev buttons
+            slideSpeed: 300,
+            paginationSpeed: 400,
+            singleItem: true,
+            loop: true,
+            autoPlay: true,
+            autoPlaySpeed: 5000,
+            autoPlayTimeout: 5000,
+            autoPlayHoverPause: true
+
+
+        });
+
+    });
+</script>
+</body>
+
+</html>
